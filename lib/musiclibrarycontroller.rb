@@ -65,6 +65,7 @@ end
 
 def play_song
   input = ""
+  puts "Which song number would you like to play?"
 
 end
 
