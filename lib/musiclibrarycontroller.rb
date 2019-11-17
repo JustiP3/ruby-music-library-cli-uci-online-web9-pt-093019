@@ -69,8 +69,7 @@ def play_song
   input = gets.chomp.to_i
   #"Playing Larry Csonka by Action Bronson"
   Song.all.sort{|s1,s2| s1.name <=> s2.name}.each.with_index(1) do |s,i|
-    #binding.pry
-    puts "Playing #{{song.name}} by #{artist.name}" if i == input
+    puts "Playing #{s.name} by #{s.artist.name}" if i == input
   end
 
 end
