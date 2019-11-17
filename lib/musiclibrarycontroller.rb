@@ -20,7 +20,22 @@ def call
     puts "What would you like to do?"
     input = gets.chomp
   end #end of while loop
-end
+
+  case input
+    when "list songs"
+      list_songs
+    when "list artists"
+      list_artists
+    when "list genres"
+      list_genres
+    when "list artist"
+      list_songs_by_artist
+    when "list genre"
+      list_songs_by_genre
+    when "play song"
+      play_song
+    end #end of case block
+end #end of method
 
 def list_songs
   Song.all.sort{|s1,s2| s1.name <=> s2.name}.each.with_index(1) do |s,i|
